@@ -8,50 +8,67 @@
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-      background-color: #0C1526;
-      color: #F2F2F2;
+      background-color: #FFFFFF;  /* white background to blend with main site */
+      color: #0C1526;
     }
+
     .shell {
       min-height: 100vh;
       display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      justify-content: flex-start;
+      align-items: center;
+      justify-content: center;
       padding: 24px 16px;
+      box-sizing: border-box;
     }
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
+
+    .agent-card {
+      width: 100%;
+      max-width: 900px;
+      border-radius: 8px;
+      border: 1px solid #E0E3EA;
+      background-color: #FFFFFF;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      padding: 16px;
+      box-sizing: border-box;
     }
-    h1 {
-      font-size: 1.4rem;
-      margin: 0 0 8px;
-    }
-    .sub {
+
+    .agent-inner {
+      border-radius: 8px;
+      border: 1px dashed #CBD5E1;
+      padding: 20px;
+      min-height: 420px;
+      box-sizing: border-box;
       font-size: 0.95rem;
-      margin: 0 0 16px;
+      color: #4A5568;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+    }
+
+    .agent-inner p {
+      margin: 0;
       max-width: 640px;
     }
-    .placeholder {
-      border-radius: 8px;
-      padding: 24px;
-      background-color: #111827;
-      border: 1px solid #374151;
-      font-size: 0.95rem;
-      line-height: 1.6;
+
+    @media (max-width: 768px) {
+      .shell {
+        padding: 16px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="shell">
-    <div class="container">
-      <h1>Brand Snapshot<span style="font-size:0.6em; vertical-align:super;">™</span></h1>
-      <p class="sub">
-        This is the hosted shell for the Brand Snapshot agent. If you are seeing this, the Vercel app is working correctly.
-      </p>
-      <div class="placeholder">
+    <div class="agent-card">
+      <div class="agent-inner">
+        <!--
+          TODO: Replace this placeholder with your live chat UI
+          (for example, an iframe that points to your Gemini/Flowise agent,
+          or a custom chat component that calls your LLM/Zapier webhook).
+        -->
         <p>
-          Next step: replace this box with an embedded chat UI for your agent (for example, an iframe pointing to your Gemini or Flowise app URL).
+          This is the Brand Snapshot agent space. When you are ready, embed your live chat experience here so visitors on wunderbardigital.com/brand-snapshot can complete their Brand Snapshot inside this panel.
         </p>
       </div>
     </div>
